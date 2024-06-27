@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+source "$REPO_PATH/lib.sh"
+say "configuring git"
+
+cp .gitignore_global ~/
+cp .gitattributes_global ~/
+
+git config --global push.default simple
+git config --global color.ui true
+git config --global core.editor vi
+git config --global core.autocrlf input
+git config --global credential.helper "cache --timeout=21600"
+git config --global core.excludesfile ~/.gitignore_global
+git config --global core.attributesfile ~/.gitattributes_global
+git config --global init.defaultBranch main
+git config --global user.name "MatthiasJonen"
+git config --global user.email "git@jonen.at"
+
+# List of supported hunk header patterns for .gitattributes:
+# https://github.com/git/git/blob/master/userdiff.c
+# or
+# $ man gitattributes (and search for ada)
