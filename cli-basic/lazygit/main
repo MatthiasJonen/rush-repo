@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+source "$REPO_PATH/lib.sh"
+
+install_function() {
+  arch=$(uname --machine)
+  if [ $arch = "aarch64" ]; then arch=arm64; else arch=x86_64; fi 
+  pushtmp
+  url="https://github.com/jesseduffield/lazygit/releases/download/v${version}/lazygit_0.42.0_Linux_${arch}.tar.gz"
+  curl -sL "$url" | tar -xzv
+  sudo install -m 755 lazygit /usr/local/bin/
+  popd
+}
+
+github_install_helper lazygit jesseduffield/lazygit
