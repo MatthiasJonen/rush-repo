@@ -2,6 +2,7 @@
 source "$REPO_PATH/lib.sh"
 package_install alacritty
 
+say "Configure alacritty"
 mkdir -p ~/.config/alacritty
 cp ./alacritty.yml ~/.config/alacritty/alacritty.yml
 

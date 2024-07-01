@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+source "$REPO_PATH/lib.sh"
+package_install lxterminal
+
+say "Configure lxterminal"
+mkdir -p ~/.config/lxterminal
+cp ./lxterminal.conf ~/.config/lxterminal/lxterminal.conf
+

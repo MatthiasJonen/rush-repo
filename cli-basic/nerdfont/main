@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+source "$REPO_PATH/lib.sh"
+
+install_function() {
+  pushtmp
+  font_name="UbuntuMono"
+  curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/${font_name}.zip"
+  say "create fonts folder"
+  sudo mkdir -p /usr/share/fonts/truetype/${font_name}
+  say "unzip ${font_name}"
+  sudo unzip "${font_name}.zip" -d "/usr/share/fonts/truetype/${font_name}/"
+  say "refresh fonts cache"
+  fc-cache -fv
+  popd
+}
+
+say "check if ubuntu nerd font is installed"
+if fc-list :family="UbuntuMono Nerd Font"; then
+  say "UbuntuMono Nerd Font already installed"
+else
+  say "Install UbuntuMono Nerd Font"
+  install_function
+  say "UbuntuMono Nerd Font installed"
+fi
+

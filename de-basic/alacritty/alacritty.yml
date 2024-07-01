@@ -1,6 +1,6 @@
 window:
   decorations: None
-  startup_mode: Fullscreen
+  startup_mode: Maximized
 
 scrolling:
   history: 10000
@@ -49,3 +49,19 @@ colors:
     cyan: "#8bd5ca"
     white: "#b8c0e0"
 
+# Fonts
+# UbuntuMonoNerdFontMono
+fonts:
+  normal:
+    family: UbuntuMono Nerd Font
+    style: Regular
+  bold:
+    family: UbuntuMono Nerd Font
+    style: Bold
+  italic:
+    family: UbuntuMono Nerd Font
+    style: Italic
+  bold_italic:
+    family: UbuntuMono Nerd Font
+    style: Bold Italic
+  size: 20.0
