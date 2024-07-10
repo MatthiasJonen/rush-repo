@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+source "$REPO_PATH/lib.sh"
+package_install konsole
+
+say "Configure konsole"
+mkdir -p ~/.local/share/konsole
+cp ./catppuccin-macchiato.colorscheme ~/.local/share/konsole/catppuccin-macchiato.colorscheme
+cp ./catppuccin.profile ~/.local/share/konsole/catppuccin.profile
+

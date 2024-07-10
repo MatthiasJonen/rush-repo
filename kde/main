@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+source "$REPO_PATH/lib.sh"
+
+say "Configure custom keymaps"
+mv ~/.config/kxkbrc ~/.config/kxkbrc.bac
+cp ./kxkbrc ~/.config/kxkbrc
+

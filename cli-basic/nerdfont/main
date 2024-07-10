@@ -23,3 +23,5 @@ else
   say "UbuntuMono Nerd Font installed"
 fi
 
+# for now hardcode as fc-list has always exit code 0
+install_function

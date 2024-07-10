@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+source "$REPO_PATH/lib.sh"
+say "Reset configuration files from backup"
+mv ~/.config/kxkbrc.bac ~/.config/kxkbrc
