@@ -23,3 +23,11 @@ $ rush list GITHUB_USER       # see package list
 ```
 
 [rush-cli]: https://github.com/DannyBen/rush-cli
+
+# Work with this repo
+## github / git access
+Use the github cli. First login, using https. Then run
+```shell
+gh auth setup-git
+```
+
