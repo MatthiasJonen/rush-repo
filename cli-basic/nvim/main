@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+source "$REPO_PATH/lib.sh"
+
+install_function() {
+  pushtmp
+  url="https://github.com/neovim/neovim/releases/download/v${version}/nvim-linux64.tar.gz"
+  curl -sL "$url" | sudo tar -xzv --directory /usr/local/bin/
+  sudo ln -s /usr/local/bin/nvim-linux64/bin/nvim nvim
+  popd
+}
+
+say "Install neovim"
+github_install_helper nvim neovim/neovim
+
+say "Configure neovim"
+mkdir -p ~/config/nvim
+#cp ./config.yml ~/.config/nvim/config.yml
+

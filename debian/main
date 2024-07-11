@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+source "$REPO_PATH/lib.sh"
+
+say "Configure backports repository"
+sudo cp ./debian-12-backports.list /etc/apt/sources.list.d/debian-12-backports.list
+sudo apt update
+
