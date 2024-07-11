@@ -11,4 +11,10 @@ install_function() {
   popd
 }
 
+say "Install lazygit"
 github_install_helper lazygit jesseduffield/lazygit
+
+say "Configure lazygit"
+mkdir -p ~/config/lazygit
+cp ./config.yml ~/.config/lazygit/config.yml
+
