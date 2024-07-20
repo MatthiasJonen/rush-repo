@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+source "$REPO_PATH/lib.sh"
+package_install flatpak
+package_install plasma-discover-backend-flatpak
+
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo

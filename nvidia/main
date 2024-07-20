@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+source "$REPO_PATH/lib.sh"
+package_install nvidia-detect
+package_install linux-headers-amd64
+package_install nvidia-driver
+package_install firmware-misc-nonfree
+
